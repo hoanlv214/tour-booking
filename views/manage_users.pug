@@ -1,0 +1,17 @@
+extend base
+block content
+  p = 'Users: ' + JSON.stringify(users)
+  .main.container.clearfix
+    .row
+      .col-md-8.col-md-offset-2
+        each user in users
+          tr
+            td
+              h3= user.name
+              ul
+                li= user.email `Email address`
+                li= user.role
+                li = user.active ? 'Active' : 'Inactive'
+                li = user.photo 
+                li = user.password 
+           
